@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Signup from './components/Signup';
 // import '../public/index.html'
-
+import {default} from ',/components/Camera';
 class App extends Component {
   render() {
     return (
