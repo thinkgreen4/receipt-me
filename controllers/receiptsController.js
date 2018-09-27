@@ -10,6 +10,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log(req.body, "this is the create img url");
     db.Receipt
       .create(req.body)
       .then(dbModel => res.json(dbModel))
