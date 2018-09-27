@@ -15,6 +15,6 @@ export default {
   },
   // Saves a receipt to the database
   saveReceipt: function(receiptData) {
-    return axios.post("/api/books", receiptData);
+    return axios.post("/api/receipt/", receiptData);
   }
 };
