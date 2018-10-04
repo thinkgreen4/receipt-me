@@ -4,6 +4,7 @@ import './App.css';
 import Signup from './components/Signup';
 // import '../public/index.html'
 import Camera from './components/Camera';
+import Receipt from './components/Receipt';
 
 class App extends Component {
   state = {
@@ -33,7 +34,7 @@ class App extends Component {
           </div>
         </div>
         <div className="col-md-8">
-          <form>
+          <div>
           <div className="row">
           <div className="col-md-6"></div>
           <div className="col-md-6">
@@ -44,13 +45,20 @@ class App extends Component {
           </div>
           <Signup></Signup>
         </div>
-      </form>
+      </div>
     </div>
         <div>
         <button onClick={this.openCamera}>Take Photo</button>
         <button onClick={this.closeCamera}>Close</button>
           {this.state.openCameraState && <Camera />}
         </div>
+    </div>
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <Receipt></Receipt>
+    </div>
+    <div class="col-md-3"></div>
     </div>
     </div>
     );
