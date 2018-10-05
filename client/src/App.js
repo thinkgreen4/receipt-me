@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Signup from './components/Signup';
 // import '../public/index.html'
-import Camera from './components/Camera';
+import Camera from './components/CameraCapture';
 import Receipt from './components/Receipt';
-import Tesseract from 'tesseract.js'
+import Tesseract from 'tesseract.js';
+import API from '../../utils/api.js';
 
 class App extends Component {
   state = {

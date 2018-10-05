@@ -5,7 +5,8 @@ const routes = require("./routes/index");
 // import App from "./client/src/App";
 //require axios for internal api calls
 const logger = require("morgan");//
-const Promise = require("bluebird")//
+const Promise = require("bluebird");//
+const axios = require("axios");
 
 mongoose.Promise = Promise;//
 
@@ -34,11 +35,11 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/receipt");
 const db = mongoose.connection;
 
-db.on("error", function(error){
+db.on("error", function(error) {
   console.log("Mongoose Error: ", error);
 })
 
-{db.once("open", function(){
+{db.once("open", function() {
   console.log("Mongoose connection successful.")
 })
 
@@ -66,10 +67,9 @@ user.lastUpdatedDate();
       res.send(doc);
     }
   })
-})
+});
 
-
-
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/receipt");
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

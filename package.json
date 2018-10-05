@@ -1,0 +1,24 @@
+{
+  "name": "receipt-me-kevin_branch",
+  "version": "1.0.0",
+  "description": "receipt",
+  "main": "server.js",
+  "dependencies": {
+    "react-native-tesseract-ocr": "^1.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkgreen4/receipt-me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkgreen4/receipt-me/issues"
+  },
+  "homepage": "https://github.com/thinkgreen4/receipt-me#readme"
+}

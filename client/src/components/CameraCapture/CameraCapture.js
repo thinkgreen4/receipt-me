@@ -9,7 +9,7 @@ class CameraCapture extends Component {
     console.log('takePhoto');
     console.log(dataUri);
     API.saveReceipt({img: dataUri}).then((res) => {
-      console.log(res);
+      console.log("this is image" + res);
     })
 
   }

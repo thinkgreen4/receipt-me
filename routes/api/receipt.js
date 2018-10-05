@@ -7,11 +7,11 @@ router.route("/")
   .get(receiptsController.findAll)
   .post(receiptsController.create);
 
-// Matches with "/api/receipts/:id"
-// router
-//   .route("/:id")
-//   .get(receiptsController.findById)
-//   .put(receiptsController.update)
-//   .delete(receiptsController.remove);
+//  Matches with "/api/receipts/:id"
+ router
+   .route("/:id")
+   .get(receiptsController.findById)
+   .put(receiptsController.update)
+   .delete(receiptsController.remove);
 
 module.exports = router;
