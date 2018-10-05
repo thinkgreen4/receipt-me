@@ -5,11 +5,18 @@ import Signup from './components/Signup';
 // import '../public/index.html'
 import Camera from './components/Camera';
 import Receipt from './components/Receipt';
+import Tesseract from 'tesseract.js'
 
 class App extends Component {
   state = {
     openCameraState: false
   }
+
+  processOCR = (myImage) => {
+    Tesseract.recognize(myImage)
+   .then(function(result){
+       console.log(result)
+   });}
 
   openCamera = (event) => {
     event.preventDefault()
@@ -50,6 +57,7 @@ class App extends Component {
         <div>
         <button onClick={this.openCamera}>Take Photo</button>
         <button onClick={this.closeCamera}>Close</button>
+        <button onClick={this.processOCR}>Scan</button>
           {this.state.openCameraState && <Camera />}
         </div>
     </div>
