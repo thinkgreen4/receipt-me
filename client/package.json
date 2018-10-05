@@ -5,7 +5,12 @@
   "proxy": "http://localhost:3000/",
   "dependencies": {
     "axios": "^0.18.0",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "jslib-html5-camera-photo": "^3.0.2-beta.0",
+    "mongoose": "^5.3.0",
+    "morgan": "^1.9.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-html5-camera-photo": "^1.2.8-beta.0",
