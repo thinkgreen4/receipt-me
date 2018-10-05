@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const passport = require('passport');
+const passportControllers = require("../../controllers/passport");
+const keysControllers = require("../../controllers/keys");
 // login
 router.get('/login', (req, res) => {
     res.render('login', { user: req.user });

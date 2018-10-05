@@ -1,4 +1,6 @@
-const router = require('express').Router();
+const router= require('express').Router();
+const passportControllers = require("../../controllers/passport");
+const keysControllers = require("../../controllers/keys");
 
 const authCheck = (req, res, next) => {
     if(!req.user){

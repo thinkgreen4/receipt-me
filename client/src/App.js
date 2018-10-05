@@ -5,6 +5,9 @@ import Signup from './components/Signup';
 // import '../public/index.html'
 import Camera from './components/Camera';
 import Tesseract from 'tesseract.js';
+import Login from './components/Login/login'
+import Profile from './components/Profile/profile'
+// import User from '../../models/userModel'
 
 class App extends Component {
   state = {
@@ -50,6 +53,21 @@ class App extends Component {
         </div>
           </div>
           <Signup></Signup>
+        </div>
+        <div>
+          <Login></Login>
+        </div>
+        <div>
+          <Profile>
+          <header>
+                  <h1>Welcome to your Receipt-Me profile, {this.username}</h1>
+                  </header>
+                  <main>
+                  {/* <img src="<%= user.thumbnail %>" /> */}
+                  <img src = {this.thumbnail} alt="profile"/>   
+                  <p></p>
+                  </main>
+          </Profile>
         </div>
       </form>
     </div>
