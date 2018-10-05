@@ -4,7 +4,8 @@ import './App.css';
 import Signup from './components/Signup';
 // import '../public/index.html'
 import Camera from './components/Camera';
-import Tesseract from 'tesseract.js';
+import Receipt from './components/Receipt';
+import Tesseract from 'tesseract.js'
 
 class App extends Component {
   state = {
@@ -40,7 +41,7 @@ class App extends Component {
           </div>
         </div>
         <div className="col-md-8">
-          <form>
+          <div>
           <div className="row">
           <div className="col-md-6"></div>
           <div className="col-md-6">
@@ -51,7 +52,7 @@ class App extends Component {
           </div>
           <Signup></Signup>
         </div>
-      </form>
+      </div>
     </div>
         <div>
         <button onClick={this.openCamera}>Take Photo</button>
@@ -59,6 +60,13 @@ class App extends Component {
         <button onClick={this.processOCR}>Scan</button>
           {this.state.openCameraState && <Camera />}
         </div>
+    </div>
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <Receipt></Receipt>
+    </div>
+    <div class="col-md-3"></div>
     </div>
     </div>
     );
