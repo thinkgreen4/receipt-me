@@ -8,6 +8,8 @@ class CameraCapture extends Component {
     // Do stuff with the photo...
     console.log('takePhoto');
     console.log(dataUri);
+    console.log(this.props.processOCR);
+    this.props.processOCR(dataUri)
     API.saveReceipt({img: dataUri}).then((res) => {
       console.log("this is image" + res);
     })

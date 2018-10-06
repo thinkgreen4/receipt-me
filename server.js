@@ -10,19 +10,19 @@ const axios = require("axios");
 
 mongoose.Promise = Promise;//
 
-var Example = require("./userModel.js")
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(logger("dev"));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+// app.use(bodyParser.json());
 // Define middleware here
 // app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
@@ -39,7 +39,7 @@ db.on("error", function(error) {
   console.log("Mongoose Error: ", error);
 })
 
-{db.once("open", function() {
+db.once("open", function() {
   console.log("Mongoose connection successful.")
 })
 
