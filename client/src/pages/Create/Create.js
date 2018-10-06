@@ -1,13 +1,13 @@
 // import React from "react";
 import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
-import "./Signup.css";
+import "../../components/Signup/Signup";
 import API from '../../utils/api.js';
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class User extends Component {
+class Create extends Component {
   // Setting our component's initial state
   state = {
     firstName: "",
@@ -136,7 +136,7 @@ class User extends Component {
   }
 }
 
-export default User;
+export default Create;
 // class Signup extends Component {
 //   onSubmit() {
 //     // Do stuff with the photo...
