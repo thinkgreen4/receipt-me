@@ -13,8 +13,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 import {faCameraRetro} from '@fortawesome/free-solid-svg-icons'
+import{faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import CamIcon from "../../components/CamIcon/CamIcon"
+import Envelope from "../../components/Envelope/Envelope"
 // library.add(faStroopwafel)
 library.add(faCameraRetro)
+library.add(faEnvelope)
 
 class Main extends Component {
   state = {
@@ -69,7 +73,20 @@ class Main extends Component {
           </Col>
           <Col size="md-12 sm-12">
             {/* <Jumbotron> */}
+            <Row>
+              <Col size="md-8 sm-12">
               <h1 id="monthtext">October Receipts</h1>
+              </Col>
+              <Col size="md-2 sm-6">
+              <CamIcon></CamIcon>
+              </Col>
+              <Col size="md-2 sm-6">
+              <Envelope></Envelope>
+              </Col>
+            </Row>
+            
+              
+              
             {/* </Jumbotron> */}
             {this.state.receipts.length ? (
               <List>
@@ -91,7 +108,7 @@ class Main extends Component {
           </Col>
           <div>
         <button onClick={this.openCamera}>Take Photo</button>
-        <button ondblclick={this.closeCamera}>Close</button>
+        <button onClick={this.closeCamera}>Close</button>
         <button onClick={this.processOCR}>Scan</button>
           {this.state.openCameraState && <Camera processOCR={this.ProcessOCR}/>}
         </div>
