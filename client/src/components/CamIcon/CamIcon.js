@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const CamIcon = () => (
   <div>
-<FontAwesomeIcon className="camIcon" size="5x" color= "Mediumslateblue" icon="camera-retro"/>
+<FontAwesomeIcon className="camIcon" size="3x" color= "Mediumslateblue" icon="camera-retro"/>
   </div>
 )
 
