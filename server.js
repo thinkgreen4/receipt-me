@@ -10,7 +10,6 @@ const axios = require("axios");
 
 mongoose.Promise = Promise;//
 
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -19,7 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-
 // app.use(bodyParser.json());
 // Define middleware here
 // app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,32 +41,29 @@ db.once("open", function() {
   console.log("Mongoose connection successful.")
 })
 
-//Routes
-app.get("/", function(req, res){
-  res.send(index.html);
-  console.log(req);
-  console.log(res);
-})
+// Routes
+// app.get("/", function(req, res){
+//   res.send(index.html);
+//   console.log(req);
+//   console.log(res);
+// })
 
-app.post("./submit", function(req, res){
-  var user = new Example(req.body);
-  console.log(req);
-  console.log(res);
-
-user.getFullName();
-user.lastUpdatedDate();
-
-
-  user.save(function(error, doc){
-    if (error) {
-      res.send(error);
-    }
-    else{
-      res.send(doc);
-    }
-  })
-});
-
+// app.post("./submit", function(req, res){
+//   var user = new Example(req.body);
+//   console.log(req);
+//   console.log(res);
+// // });
+// user.getFullName();
+// user.lastUpdatedDate();
+//   user.save(function(error, doc){
+//     if (error) {
+//       res.send(error);
+//     }
+//     else{
+//       res.send(doc);
+//     }
+//   })
+// });
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/receipt");
 // Start the API server
 app.listen(PORT, function() {
