@@ -37,7 +37,7 @@ class CameraCapture extends Component {
           idealFacingMode = {FACING_MODES.ENVIRONMENT}
           idealResolution = {{width: 640, height: 480}}
           imageType = {IMAGE_TYPES.JPG}
-          imageCompression = {0.50}
+          imageCompression = {0.}
           isMaxResolution = {false}
           isImageMirror = {false}
           isDisplayStartCameraError = {true}
