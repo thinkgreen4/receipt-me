@@ -8,9 +8,9 @@ router.route("/")
   .post(receiptsController.create);
 
 //  Matches with "/api/receipts/:id"
- router
+  router
    .route("/:id")
-   .get(receiptsController.findById)
+  //  .get(receiptsController.findById)
    .put(receiptsController.update)
    .delete(receiptsController.remove);
 
