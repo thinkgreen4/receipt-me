@@ -9,6 +9,12 @@ import Receipt from "../../components/Receipt";
 import Camera from '../../components/CameraCapture';
 import ImgRecognition from '../../components/Tesseract';
 import Tesseract from 'tesseract.js';
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+import {faCameraRetro} from '@fortawesome/free-solid-svg-icons'
+// library.add(faStroopwafel)
+library.add(faCameraRetro)
 
 class Main extends Component {
   state = {
@@ -85,7 +91,7 @@ class Main extends Component {
           </Col>
           <div>
         <button onClick={this.openCamera}>Take Photo</button>
-        <button onClick={this.closeCamera}>Close</button>
+        <button ondblclick={this.closeCamera}>Close</button>
         <button onClick={this.processOCR}>Scan</button>
           {this.state.openCameraState && <Camera processOCR={this.ProcessOCR}/>}
         </div>
