@@ -5,8 +5,10 @@ import Signup from './components/Signup';
 // import '../public/index.html'
 import Camera from './components/CameraCapture';
 import Receipt from './components/Receipt';
+import ImgRecognition from './components/Tesseract';
 import Tesseract from 'tesseract.js';
-import API from '../../utils/api.js';
+// import API from './utils/api';
+// import Imgtotext from './components/Imgtotext';
 
 class App extends Component {
   state = {
@@ -14,9 +16,11 @@ class App extends Component {
   }
 
   processOCR = (myImage) => {
+    console.log(myImage, "this is the dataUri from cameracap.js");
     Tesseract.recognize(myImage)
    .then(function(result){
        console.log(result)
+      //  this.setState();
    });}
 
   openCamera = (event) => {
@@ -32,6 +36,11 @@ class App extends Component {
     });
   }
 
+  getReceipts(){
+    console.log('getReceipts');
+  }
+
+
   render() {
     return (
     <div className="wrapper">
@@ -41,8 +50,8 @@ class App extends Component {
             <div id="form-title"><h1>reciept me</h1></div>
           </div>
         </div>
-        <div className="col-md-8">
-          <div>
+      <div className="col-md-8">
+        <div>
           <div className="row">
           <div className="col-md-6"></div>
           <div className="col-md-6">
@@ -56,18 +65,18 @@ class App extends Component {
       </div>
     </div>
         <div>
-        <button onClick={this.openCamera}>Take Photo</button>
-        <button onClick={this.closeCamera}>Close</button>
-        <button onClick={this.processOCR}>Scan</button>
-          {this.state.openCameraState && <Camera />}
+          <button onClick={this.openCamera}>Take Photo</button>
+          <button onClick={this.closeCamera}>Close</button>
+          <button onClick={this.processOCR}>Scan</button>
+            {this.state.openCameraState && <Camera processOCR={this.processOCR}/>}
         </div>
     </div>
     <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-    <Receipt></Receipt>
-    </div>
-    <div class="col-md-3"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+      <Receipt></Receipt>
+      </div>
+      <div class="col-md-3"></div>
     </div>
     </div>
     );

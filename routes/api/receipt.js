@@ -10,7 +10,7 @@ router.route("/")
 //  Matches with "/api/receipts/:id"
  router
    .route("/:id")
-   .get(receiptsController.findById)
+  //  .get(receiptsController.findById)
    .put(receiptsController.update)
    .delete(receiptsController.remove);
 

@@ -2,7 +2,7 @@
   "name": "project3",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.18.0",
     "bluebird": "^3.5.2",
@@ -14,7 +14,8 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-html5-camera-photo": "^1.2.8-beta.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "tesseract.js": "^1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",

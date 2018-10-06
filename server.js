@@ -10,12 +10,13 @@ const axios = require("axios");
 
 mongoose.Promise = Promise;//
 
-var Example = require("./userModel.js")
+var Example = require("./models/user.js")
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(logger("dev"));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
@@ -39,7 +40,7 @@ db.on("error", function(error) {
   console.log("Mongoose Error: ", error);
 })
 
-{db.once("open", function() {
+db.once("open", function() {
   console.log("Mongoose connection successful.")
 })
 

@@ -10,7 +10,10 @@ const axios = require('axios');
 const Schema = mongoose.Schema;
 
 const ReceiptSchema = new Schema ({
-    img: { data: Buffer, contentType: String } 
+    img: { 
+        type: String,
+        data: Buffer
+    } 
   
 });
 
