@@ -4,6 +4,7 @@ import './App.css';
 import Signup from './components/Signup';
 // import '../public/index.html'
 import Camera from './components/Camera';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   state = {
@@ -26,6 +27,7 @@ class App extends Component {
   render() {
     return (
     <div className="wrapper">
+    <Navbar></Navbar>
       <div className="row main-row">
         <div className="col-md-4 left-side">
           <div className="left-side-bg">
