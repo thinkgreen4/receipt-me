@@ -1,15 +1,22 @@
-nav.navbar.navbar-default {
-  margin-bottom: 0;
-  
+nav{
+  background-image: linear-gradient(90deg, aquamarine, #a8a8fb);
+  padding: 18px;
 }
-.bg-light {
-  background-color: #95ffbe!important;
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-family: roboto;
+  margin-bottom: 0rem;
+  font-weight: 500;
+  line-height: .9;
 }
 
 input {
-  width: 50%;
+  width: 64%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 22px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
