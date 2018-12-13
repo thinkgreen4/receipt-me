@@ -5,6 +5,8 @@ import "./Navbar.css";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div clasName="row">
+  <div clasName="col-md-6"></div>
     <div className="navbar-brand" to="/">
       Pupster
     </div>
@@ -45,8 +47,18 @@ const Navbar = props => (
           >
             Search
           </div>
-        </li>
+        
+      <div clasName="col-md-3">
+      <label for="username">Username:</label>
+      <input type="username" autocomplete="on" id="username" name="username" placeholder="Username"></input>
+      </div>
+      <div clasName="col-md-3">
+      <label for="password">Password:</label>
+      <input type="password" autocomplete="on" id="password" name="password" placeholder="Password"></input>
+       </div>
+      </li>
       </ul>
+    </div>
     </div>
   </nav>
 );

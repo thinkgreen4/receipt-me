@@ -5,3 +5,11 @@ nav.navbar.navbar-default {
 .bg-light {
   background-color: #95ffbe!important;
 }
+
+input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
