@@ -1,6 +1,6 @@
 nav{
-  background-image: linear-gradient(90deg, aquamarine, #a8a8fb);
-  padding: 18px;
+  background-color: rgb(33, 25, 39);
+  padding: 18px; 
 }
 
 h1 {
@@ -12,11 +12,44 @@ h1 {
   line-height: .9;
 }
 
-input {
-  width: 64%;
+.navlogin{
+  color: white;
+  padding-right: 6px;
+}
+
+#loginbtn{
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(33, 25, 39);
+  border: none;
+  font-size: large;
   padding: 10px;
-  border: 1px solid #ccc;
+}
+
+input {
+  width: 62%;
+  padding: 9px;
+  border: 2px solid white;
   border-radius: 22px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background:  rgba(33, 25, 39);
+  font-family: sans-serif;
+  color: white; 
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+  opacity: 1; /* Firefox */
+  padding-left: 5px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:rgba(255, 255, 255, 0.25);
+ padding-left: 5px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: rgba(255, 255, 255, 0.25);
+ padding-left: 5px;
 }

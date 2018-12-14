@@ -1,0 +1,39 @@
+.about{
+  margin-top: 5em;
+  padding: 3em;
+  background: white;
+  border: 2px solid #a8a8fb;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+#aboutReceiptMe{
+  color: #4c4c4c;
+  text-align: center;
+  line-height: 2;
+  padding: 10px;
+  border-bottom: 2px solid;
+}
+
+#aboutText{
+  padding-top: 3em;
+  font-family: Roboto;
+  color: #acacac;
+  font-size: large;
+  line-height: 2.75em;
+}
+
+#signUpText{
+  text-align: center;
+  color: #7b126d;
+  padding: 1em;
+}
+
+#centerBlock{
+  text-align: center;
+}
+createAccountBtn{
+border: 2px solid #ff0079;
+    border-radius: 24px;
+    padding: 11px;
+    background: #ffffff00;
+}

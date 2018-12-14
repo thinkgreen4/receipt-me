@@ -5,6 +5,7 @@ import Signup from './components/Signup';
 // import '../public/index.html'
 import Camera from './components/Camera';
 import Navbar from './components/Navbar';
+import About from './components/About';
 
 class App extends Component {
   state = {
@@ -27,8 +28,10 @@ class App extends Component {
   render() {
     return (
     <div className="wrapper">
+    <body>
     <Navbar></Navbar>
-      <div className="row main-row">
+    <About></About>
+      {/* < div className="row main-row">
         <div className="col-md-4 left-side">
           <div className="left-side-bg">
             <div id="form-title"><h1>reciept me</h1></div>
@@ -53,8 +56,10 @@ class App extends Component {
         <button onClick={this.closeCamera}>Close</button>
           {this.state.openCameraState && <Camera />}
         </div>
+    </div> */}
+    </body>
     </div>
-    </div>
+   
     );
   }
 }

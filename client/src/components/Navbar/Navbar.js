@@ -10,14 +10,16 @@ const Navbar = props => (
   <div className="col-md-2"><h1>receipt me</h1></div>
   <div className="col-md-3"></div>       
       <div className="col-md-2">
-      <label for="username">Username:</label>
+      <label for="username" className="navlogin">Username:</label>
       <input type="username" autocomplete="on" id="username" name="username" placeholder="Username"></input>
       </div>
       <div className="col-md-2">
-      <label for="password">Password:</label>
+      <label for="password" className="navlogin">Password:</label>
       <input type="password" autocomplete="on" id="password" name="password" placeholder="Password"></input>
        </div>
-      <div className="col-md-1"></div>
+      <div className="col-md-1">
+      <button id="loginbtn" type="submit">Login</button>
+      </div>
     </div>
   </nav>
 );
