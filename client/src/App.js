@@ -6,6 +6,7 @@ import Signup from './components/Signup';
 import Camera from './components/Camera';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import NewUser from './components/NewUser';
 
 class App extends Component {
   state = {
@@ -30,7 +31,11 @@ class App extends Component {
     <div className="wrapper">
     <body>
     <Navbar></Navbar>
-    <About></About>
+    {/* this will be the first page that the user will see */}
+    {/* <About></About> */}
+    <NewUser></NewUser>
+
+
       {/* < div className="row main-row">
         <div className="col-md-4 left-side">
           <div className="left-side-bg">
