@@ -4,9 +4,7 @@ import "./NewUser.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const NewUser = () => (
-  //   <div>
-  //   <h1>Please Work</h1>
-  // </div>
+
   <section>
     <div className="row">
       <div className="col-lg-2"></div>
@@ -72,19 +70,6 @@ const NewUser = () => (
 
             </div>
           </div>
-
-          {/* <div className="row">
-          <div className="col-lg-4"></div>
-          <div className="col-lg-4" id="centerBlock">
-          <button id="createAccountBtn" type="submit">Create Account</button>
-          </div>
-          <div className="col-lg-4">
-          </div>
-          </div> */}
-
-
-
-
         </div>
       </div>
       <div className="col-lg-2"></div>
