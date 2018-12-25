@@ -4,9 +4,7 @@ import "./About.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const About = () => (
-  //   <div>
-  //   <h1>Please Work</h1>
-  // </div>
+ 
   <section>
     <div className="row">
       <div className="col-lg-2"></div>
