@@ -19,11 +19,16 @@ h1 {
 
 #loginbtn{
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Roboto';
   background: rgba(33, 25, 39);
   border: none;
   font-size: large;
   padding: 10px;
+}
+
+#loginbtn:hover{
+  color: pink;
+  cursor: pointer;
 }
 
 input {

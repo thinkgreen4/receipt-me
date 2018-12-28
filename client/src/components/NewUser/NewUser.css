@@ -32,11 +32,12 @@
 #centerBlock{
   text-align: center;
 }
-createAccountBtn{
+#createAccountBtn{
     border: 2px solid #ff0079;
     border-radius: 24px;
     padding: 11px;
     background: #ffffff00;
+    transition: 0.2s;
 }
 
 .valid {
@@ -57,4 +58,23 @@ createAccountBtn{
   position: relative;
   left: 5px; 
   content: "X";
+}
+
+h3 {
+  padding-top: 2em;;
+  padding-bottom:1em;
+}
+
+p {
+  font-family: Roboto;
+}
+
+.formField {
+  text-align: center;
+}
+
+#createAccountBtn:hover {
+  background-color: #ff0079;
+  color: white;
+  cursor: pointer;
 }
